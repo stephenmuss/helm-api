@@ -1,7 +1,15 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+pub mod chart;
+pub mod config;
+pub mod hook;
+pub mod info;
+pub mod metadata;
+pub mod release;
+pub mod rudder;
+pub mod rudder_grpc;
+pub mod status;
+pub mod template;
+pub mod test_run;
+pub mod test_suite;
+pub mod tiller;
+pub mod tiller_grpc;
+pub mod version;
