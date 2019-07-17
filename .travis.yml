@@ -33,3 +33,4 @@ deploy:
   local-dir: public
   on:
     branch: master
+    rust: stable
