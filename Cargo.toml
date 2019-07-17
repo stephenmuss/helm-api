@@ -9,6 +9,8 @@ keywords = ["helm", "kubernetes", "grpc", "protobuf"]
 readme = "README.md"
 description = "Helm client library for Rust"
 homepage = "https://github.com/stephenmuss/helm-api"
+repository = "https://github.com/stephenmuss/helm-api"
+documentation = "https://stephenmuss.github.io/helm-api/doc/grpcio/index.html"
 
 [dependencies]
 futures = "0.1"
