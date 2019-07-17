@@ -1,14 +1,35 @@
 language: rust
-rust:
+
+-rust:
   - stable
   - beta
   - nightly
 matrix:
   allow_failures:
     - rust: nightly
+
+cache:
+  - cargo
+
 before_install:
   - curl -OL https://github.com/google/protobuf/releases/download/v3.7.1/protoc-3.7.1-linux-x86_64.zip
   - sudo unzip -o protoc-3.7.1-linux-x86_64.zip -d /usr/local bin/protoc
   - sudo unzip -o protoc-3.7.1-linux-x86_64.zip -d /usr/local include/*
+
 script:
-    - PATH=$HOME/bin:$PATH cargo build
+    - cargo build
+
+before_deploy:
+  - cargo doc
+  - mkdir public
+  - cp -r target/doc public/
+  - echo "<meta http-equiv=refresh content=0;url=doc/helm_api/index.html>" > public/index.html
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  local-dir: public
+  on:
+    branch: master
