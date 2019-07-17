@@ -1,5 +1,8 @@
 # helm-api
 
+[![Build Status](https://travis-ci.org/stephenmuss/helm-api.svg?branch=master)](https://travis-ci.org/stephenmuss/helm-api)
+[![docs](https://docs.rs/helm-api/badge.svg)](https://stephenmuss.github.io/helm-api/doc/helm_api/index.html)
+
 helm-api is a Helm client library for Rust.
 
 Rust modules are automatically generated from the `.proto` files in the [Helm project](https://github.com/helm/helm/).
