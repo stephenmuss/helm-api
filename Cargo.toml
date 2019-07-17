@@ -3,6 +3,12 @@ name = "helm-api"
 version = "0.1.0"
 authors = ["Stephen Muss <stephenmuss@gmail.com>"]
 edition = "2018"
+include = ["src/**/*", "Cargo.toml"]
+license = "Apache-2.0"
+keywords = ["helm", "kubernetes", "grpc", "protobuf"]
+readme = "README.md"
+description = "Helm client library for Rust"
+homepage = "https://github.com/stephenmuss/helm-api"
 
 [dependencies]
 futures = "0.1"
